@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gallery | AtliQ HR Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .dashboard-preview {
+            width: 100%;
+            height: auto;
+            /* Allow auto height for full image */
+            background: #e0e0e0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #757575;
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-preview img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .dashboard-preview:hover img {
+            transform: scale(1.02);
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar"></nav>
+
+    <div class="container section animate-on-scroll">
+        <h1>Dashboard Gallery</h1>
+        <p class="intro-text" style="font-size: 1.2rem; color: var(--text-light); margin-bottom: var(--spacing-xl);">
+            Visualizing 3 months of employee attendance data.
+        </p>
+
+        <div class="animate-on-scroll">
+            <!-- Main Dashboard Large View -->
+            <h2>Quarterly Consolidated Report</h2>
+            <div class="dashboard-preview" style="margin-bottom: var(--spacing-lg);">
+                <img src="../assets/Dashboard.png" alt="Main Dashboard Consolidated View">
+            </div>
+            <p style="text-align: center; margin-bottom: var(--spacing-xl); color: var(--text-light);">
+                Holistic view of presence, WFH, and leave patterns across all departments for Q2.
+            </p>
+
+            <h2>Month-wise Analysis</h2>
+            <div class="grid-3-col"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-xl); margin-top: var(--spacing-md);">
+
+                <div>
+                    <div class="dashboard-preview">
+                        <img src="../assets/Apr_Dashboard.png" alt="April Dashboard">
+                    </div>
+                    <div class="caption">April 2022 Overview</div>
+                </div>
+
+                <div>
+                    <div class="dashboard-preview">
+                        <img src="../assets/May_Dashboard.png" alt="May Dashboard">
+                    </div>
+                    <div class="caption">May 2022 Overview</div>
+                </div>
+
+                <div>
+                    <div class="dashboard-preview">
+                        <img src="../assets/June_Dashboard.png" alt="June Dashboard">
+                    </div>
+                    <div class="caption">June 2022 Overview</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section animate-on-scroll">
+            <h2>🔍 Focus Mode</h2>
+            <p style="margin-bottom: 20px;">Drill-down views into specific metrics.</p>
+
+            <div class="grid-2-col"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-lg);">
+                <div class="card">
+                    <h3>Presence % Trends</h3>
+                    <p style="margin-bottom: 15px;">Daily trend analysis of employee presence.</p>
+                    <div class="dashboard-preview">
+                        <img src="../assets/pres.png" alt="Presence Trend Analysis">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>WFH Analysis</h3>
+                    <p style="margin-bottom: 15px;">Detailed breakdown of Work From Home by day.</p>
+                    <div class="dashboard-preview">
+                        <img src="../assets/workfromhome.png" alt="WFH Trend Analysis">
+                    </div>
+                </div>
+
+                <div cl ass="card">
+                    <h3>Sick Leave Trends</h3>
+                    <p style="margin-bottom: 15px;">Identifying anomalies in sick leave patterns.</p>
+                    <div class="dashboard-preview">
+                        <img src="../assets/sickleave.png" alt="Sick Leave Analysis">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Employee Details</h3>
+                    <p style="margin-bottom: 15px;">Granular view of individual employee records.</p>
+                    <div class="dashboard-preview">
+                        <img src="../assets/Emp_Record.png" alt="Employee Record View">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

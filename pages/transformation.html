@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transformation | AtliQ HR Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: var(--spacing-md);
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar"></nav>
+
+    <div class="container section animate-on-scroll">
+        <h1>Data & Transformation</h1>
+        <p class="intro-text" style="font-size: 1.2rem; color: var(--text-light); margin-bottom: var(--spacing-xl);">
+            From messy Excel sheets to a clean Star Schema data model using Power Query.
+        </p>
+
+        <div class="grid-2-col" style="display: grid; grid-template-columns: 1fr 300px; gap: var(--spacing-xl);">
+            <div>
+                <h2>🔄 ETL Pipeline</h2>
+
+                <div class="flow-step">
+                    <div class="step-number">01</div>
+                    <div>
+                        <h4>Raw Data Import</h4>
+                        <p>Imported 3 months of attendance data from Excel. The data was in a 'Wide' format with dates
+                            as columns.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">02</div>
+                    <div>
+                        <h4>Unpivoting Columns</h4>
+                        <p>Transformed the data from Wide to Long format to make it analyzable.</p>
+                        <div class="code-block">
+                            = Table.UnpivotOtherColumns(Source, {"Emp ID", "Name"}, "Date", "Status")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">03</div>
+                    <div>
+                        <h4>Date Cleaning</h4>
+                        <p>Fixed inconsistent date formats and created a derived 'Month' and 'Day of Week' column.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">04</div>
+                    <div>
+                        <h4>Creating Parameters</h4>
+                        <p>Created a dynamic parameter function to fetch data sheets automatically based on sheet names.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="card" style="position: sticky; top: 100px;">
+                    <h3>🛠 Tools Used</h3>
+                    <ul style="margin-top: 10px;">
+                        <li style="margin-bottom: 8px;">✅ <strong>Power Query</strong> for ETL</li>
+
+                        <li style="margin-bottom: 8px;">✅ <strong>Excel</strong> as Source</li>
+                    </ul>
+                    <hr style="margin: 15px 0; border: 0; border-top: 1px solid var(--light-border);">
+                    <h4>Data Schema</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        The final model consists of a Fact table (Attendance) joined with Dimension tables (Employees,
+                        Date Master).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

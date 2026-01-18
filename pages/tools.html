@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Skills | AtliQ HR Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .skill-tag {
+            background: #eef1f5;
+            color: var(--secondary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar"></nav>
+
+    <div class="container section animate-on-scroll">
+        <h1>Tools & Skills</h1>
+        <p class="intro-text" style="font-size: 1.2rem; color: var(--text-light); margin-bottom: var(--spacing-xl);">
+            The technical stack and methodologies applied in this project.
+        </p>
+
+        <div class="grid-2-col"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-xl);">
+
+            <div>
+                <h2>🛠 Tools Used</h2>
+                <div class="grid-2-col"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-top: var(--spacing-md);">
+                    <div class="card" style="text-align: center;">
+                        <div class="tool-icon">📊</div>
+                        <h3>Power BI</h3>
+                        <p>Dashboarding & DAX</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="tool-icon">⚡</div>
+                        <h3>Power Query</h3>
+                        <p>ETL & Data Cleaning</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="tool-icon">📗</div>
+                        <h3>Excel</h3>
+                        <p>Data Source</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <h2>🧠 Technical Skills</h2>
+                <div class="card" style="margin-top: var(--spacing-md);">
+                    <h4 style="margin-bottom: 15px;">Data Analysis</h4>
+                    <div>
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">Data Modeling (Star Schema)</span>
+                        <span class="skill-tag">DAX Measures</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                    </div>
+
+                    <h4 style="margin-bottom: 15px; margin-top: 20px;">Visualization</h4>
+                    <div>
+                        <span class="skill-tag">Dashboard Design</span>
+                        <span class="skill-tag">Storytelling</span>
+                        <span class="skill-tag">UX/UI for Data</span>
+                    </div>
+
+                    <h4 style="margin-bottom: 15px; margin-top: 20px;">Domain Knowledge</h4>
+                    <div>
+                        <span class="skill-tag">HR Analytics</span>
+                        <span class="skill-tag">KPI Definition</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

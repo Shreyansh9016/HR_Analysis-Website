@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview | AtliQ HR Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body>
+
+    <nav class="navbar"></nav>
+
+    <div class="container section animate-on-scroll">
+        <h1>Project Overview</h1>
+        <p class="intro-text" style="font-size: 1.2rem; color: var(--text-light); margin-bottom: var(--spacing-xl);">
+            Understanding the business context and the critical HR questions answered by this analysis.
+        </p>
+
+        <div class="grid-2-col"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+
+            <div class="card">
+                <h3>📌 Business Context</h3>
+                <p>
+                    AtliQ Technologies, a growing tech firm, needed to standardize their HR reporting. Post-pandemic,
+                    the workforce shifted to hybrid models, making it difficult to track actual office presence vs.
+                    remote work claims.
+                </p>
+                <br>
+                <p>
+                    The HR director required a dashboard to monitor:
+                </p>
+                <ul style="list-style: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>Daily attendance patterns.</li>
+                    <li>Sick leave abuse or trends.</li>
+                    <li>Adherence to the WFH policy.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🧩 Problem Statement</h3>
+                <p>
+                    Data was scattered across multiple Excel sheets with inconsistent formatting.
+                </p>
+                <br>
+                <p><strong>Key Challenges:</strong></p>
+                <ul style="list-style: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>Dates were in non-standard formats.</li>
+                    <li>Attendance codes were ambiguous (e.g., 'P', 'WFH', 'SL', 'PL').</li>
+                    <li>No historical tracking of "Present %" over time.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <h2 style="margin-top: var(--spacing-xl);">📊 Key Questions Analysis</h2>
+        <div class="grid-3-col"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-md);">
+
+            <div class="card" style="text-align: center; border-top: 4px solid var(--primary-color);">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🏢</div>
+                <h4>Presence %</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light);">What is the average daily attendance in the
+                    office?</p>
+            </div>
+
+            <div class="card" style="text-align: center; border-top: 4px solid var(--accent-color);">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🏠</div>
+                <h4>WFH Trends</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light);">How many employees prefer WFH on Fridays vs
+                    Mondays?</p>
+            </div>
+
+            <div class="card" style="text-align: center; border-top: 4px solid var(--secondary-color);">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🤒</div>
+                <h4>Sick Leave Patterns</h4>
+                <p style="font-size: 0.9rem; color: var(--text-light);">Is there a spike in sick leaves on specific
+                    days?</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer"></footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
